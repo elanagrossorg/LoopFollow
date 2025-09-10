@@ -117,7 +117,8 @@ class BackgroundAlertManager {
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
-        content.sound = .defaultCritical
+        content.sound = nil
+        content.interruptionLevel = .passive
         content.categoryIdentifier = "loopfollow.background.alert"
         return content
     }
